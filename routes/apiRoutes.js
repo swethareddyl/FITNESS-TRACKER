@@ -1,6 +1,6 @@
 const router = require("express").Router();
 // const { Router } = require("express");
-const Workout = require('../models/Workout');
+const Workout = require('../models/workout');
 
 router.post('/api/workouts', (req, res) => {
     Workout.create({})
@@ -68,6 +68,7 @@ router.get('/api/workouts/range', (req, res) => {
 })
 
 router.delete('/api/workouts', (req, res) => {
+    
     Workout.findByIdAndDelete(req.body.id)
     .then(() => {
         res.json(true)

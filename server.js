@@ -2,7 +2,7 @@ const express = require('express');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8000;
 
 const app = express();
 
@@ -30,6 +30,6 @@ mongoose.connect(
 app.use(require('./routes/apiroutes'));
 app.use(require('./routes/htmlroutes'));
 
-app.listen((process.env.port || 5000), () => {
+app.listen((process.env.port || 8000), () => {
     console.log(`running on port ${PORT}`);
 })

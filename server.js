@@ -30,6 +30,6 @@ mongoose.connect(
 app.use(require('./routes/apiroutes'));
 app.use(require('./routes/htmlroutes'));
 
-app.listen((process.env.port || 8000), () => {
+app.listen(PORT, () => {
     console.log(`running on port ${PORT}`);
 })
